@@ -1,0 +1,67 @@
+Dim Ticker As String
+Dim Stock_Total As Double
+Dim Summary_Table As Integer
+Dim LastRow As Long
+Dim Close_Price As Double
+Dim Yearly_Change As Double
+Dim Yearly_Percentage As Double
+Sub cell():
+   For Each ws In Worksheets
+        ws.Range("H1:L1").Font.Color = vbBlue
+        ws.Range("I1").Value = "Ticker"
+        ws.Range("J1").Value = "Stock Volume"
+        ws.Range("K1").Value = "Yearly Change"
+        ws.Range("L1").Value = "Yearly Percentage"
+    
+        LastRow = ws.Cells(Rows.Count, "B").End(xlUp).Row
+        
+    
+Summary_Table = 2
+Stock_Total = 0
+
+For j = 2 To LastRow
+        If Cells(j, 1).Value <> Cells(j - 1, 1).Value Then
+                    Summary_Table = Summary_Table + 1
+                    'Open price
+                    Open_Price = Cells(j, 3).Value
+
+        End If
+                                          
+        If Cells(j, 1).Value <> Cells(j + 1, 1).Value Then
+               Stock_Total = Stock_Total + Cells(j, 7).Value
+               Range("J" & Summary_Table).Value = Stock_Total
+               Stock_Total = 0
+               'Ticker details
+                Ticker = Cells(j, 1).Value
+                Range("I" & Summary_Table).Value = Ticker
+                                           
+                'Close Price
+                Close_Price = Cells(j, 6).Value
+        Else
+                Stock_Total = Stock_Total + Cells(j, 7).Value
+                
+        End If
+        If Cells(j, 11).Value >= 0 Then
+        Cells(j, 11).Interior.ColorIndex = 4
+        Else
+        Cells(j, 11).Interior.ColorIndex = 3
+        End If
+
+                
+        If Cells(j, 1).Value <> Cells(j + 1, 1).Value Then
+            Yearly_Change = Close_Price - Open_Price
+            Range("K" & Summary_Table).Value = Yearly_Change
+                 If Open_Price = 0 Then
+                 Range("J" & Summary_Table).Value = "N/A"
+                    
+                Else
+                Yearly_Percentage = Yearly_Change / Open_Price
+                Range("L" & Summary_Table).Value = Yearly_Percentage
+                   Range("L" & Summary_Table).NumberFormat = "0.00%"
+                End If
+        End If
+Next j
+    Next ws
+   
+End Sub
+
