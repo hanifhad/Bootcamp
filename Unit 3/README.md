@@ -1,2 +1,2 @@
-# Bootcamp
-This is the start of journey into data analytics in sequence of completion with a synopsis of each milestone.
+# Unit 3
+This is for Unit 3 PyPoll and PyBank assignments.
