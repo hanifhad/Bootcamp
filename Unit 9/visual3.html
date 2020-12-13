@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualization Three Page</title>
+  
+  <!-- Setup of Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- Style-->
+  <link rel="stylesheet" href="bootstrap_min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Putting up header-->
+    <header class="bg-secondary">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark nav-padding">
+                    <a class="navbar-brand btn-secondary rounded nav-button" href="index.html" >Latitude</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse order-3" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Plots
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="visual1.html">Max Tempature</a>
+                                    <a class="dropdown-item" href="visual2.html">Humidity</a>
+                                    <a class="dropdown-item" href="visual3.html">Cloudiness</a>
+                                    <a class="dropdown-item" href="visual4.html">Wind Speed</a>
+                                </div>
+                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comparisons.html">Comparison</a>
+                        </li>
+                         </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <!-- Landing-->
+    <main class="main bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Content -->
+                <div class="col-xs-12 col-sm-12 col-md-7">
+                    <div class="box bg-white">
+                        <h2>Cloudiness</h2>
+                        <hr>
+                        <img class="float-left" height="100%" width="100%" src="images/Fig3.png" alt="Fig1">
+                        <p class="format">The data seems scattered throughout evenly. However, we could see 100% cloudiness occurs
+                            as we gravitate towards the equator. Also the northern hemisphere seems be more cloudy.
+                        </p>
+                    </div>
+                </div>
+                <!-- Visual -->
+                <div class="col-xs-12 col-sm-12 col-md-5">
+                    <div class="box bg-white">
+                        <h2>Visualizations</h2>
+                        <hr>
+                        <div container>
+                            <div class="row">
+                                <div class="col-xs-3 col-sm-3 col-md-6">
+                                    <div>
+                                        <a  href="visual1.html">
+                                            <img height=100% width=100% src="images/Fig1.png" alt="Fig1">
+                                        </a>   
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-6">
+                                    <div>
+                                        <a  href="visual2.html">
+                                            <img height=100% width=100% src="images/Fig2.png" alt="Fig2">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-6">
+                                    <div class="box-selected">
+                                        <a  href="visual3.html">
+                                        <img height=100% width=100% src="images/Fig3.png" alt="Fig3">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-6">
+                                    <div>
+                                        <a  href="visual4.html">
+                                        <img height=100% width=100% src="images/Fig4.png" alt="Fig4">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
