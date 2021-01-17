@@ -24,9 +24,9 @@ function resetTable() {
     // clear the current data
     clearTable();
 
-    data.forEach((ufoSighting) => {
+    data.forEach((ufo) => {
         var row = tbody.append("tr");
-        Object.values(ufoSighting).forEach(value => {
+        Object.values(ufo).forEach(value => {
             var cell = row.append("td");
             cell.text(value);
             cell.attr("class", "table-style");}); 
@@ -56,11 +56,11 @@ function filterTable() {
 
     clearTable();
 
-    filteredData.forEach((ufoSighting) => {
+    filteredData.forEach((ufo) => {
 
         var row = tbody.append("tr");
 
-        Object.values(ufoSighting).forEach(value => {
+        Object.values(ufo).forEach(value => {
 
             var cell = row.append("td");
 
